@@ -1,3 +1,4 @@
+# Definiendo longitud para poder realizar grafica entre las longitudes
 def length(l):
     metering = {  # Medidas
         'standard lenght': l['Lenght1'], # Longitud estandar
