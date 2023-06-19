@@ -1,15 +1,16 @@
-import utils
-import read_csv
+import pandas as pd
+from utils import length
 import charts
 
 def run():
-    fish = read_csv.fish_csv('./Analisis/Fish.csv')
-    fish = list(filter(lambda metering: metering['Weight'] == '242', fish))
-    
-    specie = list(lambda x:x[utils.species_by_length(specie= '')])
-    metering = utils.length( length_metering = 'Lenght1')
-    charts.generate_bar_chart(specie,metering)
+    # Leer el archivo CSV y cargar los datos en un DataFrame
+    df = pd.read_csv('data/Fish.csv')
 
-    
-if __name__ == '__main__':
+    # Obtener las etiquetas y los valores utilizando la función length()
+    labels, values = length(df)
+
+    # Llamar a la función en charts.py para generar las gráficas
+    charts.generate_bar_chart(labels, values)
+
+if __name__ == "__main__":
     run()

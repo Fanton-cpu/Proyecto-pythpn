@@ -1,15 +1,9 @@
-def length(length_metering):
-    metering = {
-        'standard lenght': length_metering['lenght1'],
-        'fork lenght': length_metering['lenght2'],
-        'total length': length_metering['length3']
+def length(l):
+    metering = {  # Medidas
+        'standard lenght': l['Lenght1'], # Longitud estandar
+        'fork lenght': l['Lenght2'],     # Longitud horquidea
+        'total length': l['Length3']     # Longitud total
     }
-    labels = metering.keys()
-    values = metering.values()
+    labels = list(metering.keys())      #Etiqueta 
+    values = list(metering.values())    #Valores
     return labels, values
-
-
-def length_by_fish(species):
-    result = list(filter(lambda item: item['Species'], species))
-    return result
-

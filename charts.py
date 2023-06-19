@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
-def generate_bar_chart(length, values):
+def generate_bar_chart(labels, values):
     fig1, ax = plt.subplots()
-    ax.bar(length, values)
+    ax.bar(labels, values)
     plt.show()
     
